@@ -62,7 +62,7 @@ next.addEventListener("click" , function(){
 })
 
 //Handle pagination  Items click
-let paginationItems = document.querySelectorAll(".pagination div");
+let paginationItems = Array.from(document.querySelectorAll(".pagination div"));
 paginationItems[0].classList.add("active");
 
 paginationItems.forEach((item , itemIndex)=>{
