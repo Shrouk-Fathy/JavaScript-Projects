@@ -1,0 +1,97 @@
+*{
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+html{
+    font-size: 16px;
+}
+body{
+    background-color: #eee;
+}
+/* External Container */
+.todo-container{
+    width: 1000px;
+    max-width: 95%;
+    height: 80vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+/* Top Container */
+.top-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: solid 1px #000;
+    border-radius: 30px;
+    box-shadow: 0 2px 10px rgba(89, 88, 83, 0.3);
+    background-color: #fff;
+}
+.top-container > *{
+    margin-top: 10px;
+}
+/* Logo */
+.logo{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(89, 88, 83, 0.3);
+}
+/* addTask Section */
+.add-tasks{
+    width: max(70% , 350px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.add-tasks > *{
+    margin-left: 5px;
+}
+button,input[type="checkbox"]{
+    cursor: pointer;
+}
+#inputTask{
+    width: 50%;
+}
+button,h4{
+    /* width: 20%; */
+    font-size: 1rem;
+}
+button,
+#inputTask{
+    padding: .4em .9em;
+}
+/* Bottom Container */
+.bottom-container{
+    width: 100%;
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    column-gap: 10px;
+}
+.bottom-container > div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: solid 1px #000;
+    border-radius: 30px;
+    box-shadow: 0 2px 10px rgba(89, 88, 83, 0.3);
+    background-color: #fff;
+}
+.bottom-container h3{
+    color: #6d6a6a;
+    margin: 10px;
+}
+@media screen and (max-width:600px){
+    html{
+        font-size: 13px;
+    }
+}
