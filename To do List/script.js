@@ -3,12 +3,19 @@ let taskId = 1; // Initialize a counter for generating unique IDs
 
 const inputTask = document.getElementById("inputTask");
 
+ // Update the event listener for the keydown event on the input field
+ inputTask.addEventListener("keydown", function(e) {
+  if (e.key === "Enter") {
+      addTask();
+  }
+});
+
 function addTask() {
   if (inputTask.value.trim() !== "") {
-    let taskContainer = document.createElement("div");
-    let checkBox = document.createElement("input");
-    let taskName = document.createElement("input");
-    let doneButton = document.createElement("button");
+    const taskContainer = document.createElement("div");
+    const checkBox = document.createElement("input");
+    const taskName = document.createElement("input");
+    const doneButton = document.createElement("button");
 
     // set the type of checkBoxInput
     checkBox.type = "checkbox";
@@ -56,8 +63,8 @@ function check(checkboxId) {
   const checkbox = document.getElementById(checkboxId);
   const taskNameId = checkboxId.replace("checkBox", "taskName");
   const taskName = document.getElementById(taskNameId);
-  const doneButton = checkbox.nextElementSibling;
-
+  const doneButton = checkbox.nextElementSibling.nextElementSibling;
+  
   if (checkbox.checked) {
     taskName.readOnly = false;
     taskName.focus();
